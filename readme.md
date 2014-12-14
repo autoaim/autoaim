@@ -1,4 +1,4 @@
-#CF自瞄
+#CF自瞄（仅限步枪） 推荐爆头战使用
 
 # [点我下载](https://github.com/autoaim/autoaim/archive/master.zip)
 
