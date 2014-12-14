@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CommondInfo>
+<Commond Keyword="SetEnv" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="GetEnv" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="Call" Regex09="\s*Call[ 	]+[^\d].*" Regex01="(\s*)(%s)([ 	]+)(.*)" RegexFormat="$1($2)($3)($4)" Descript="">
+<MoreInfo MoreCheckRegex="\w+" MoreConvertRegex="([=+-/\\\* 	\&lt;\&gt;\{\}])" MoreFormat="_" MoreSuffix="4"/>
+<MoreInfo MoreCheckRegex="(^(%key)[^ 	]+)|([^ 	]+(%key)$)" MoreConvertRegex="^(%key)" MoreFormat="QMScript_$1" MoreSuffix="4"/>
+<MoreInfo MoreCheckRegex="^[^0123456789][\W\w\u4e00-\u9fa5]*" MoreConvertRegex="(.+)" MoreFormat="QMScript_$1" MoreSuffix="4"/>
+<MoreInfo MoreCheckRegex="[^\(\)]+\(\)" MoreConvertRegex="(.+)" MoreFormat="$1\(\)" MoreSuffix="4"/>
+</Commond>
+<Commond Keyword="Rem" Regex09="\s* " Regex01="(\s*)(%s)([ 	]+)(.+)" RegexFormat="$1($2)($3)($4)" Descript="">
+<MoreInfo MoreCheckRegex="\w+" MoreConvertRegex="([=+-/\\\* 	\&lt;\&gt;\{\}])" MoreFormat="_" MoreSuffix="4"/>
+<MoreInfo MoreCheckRegex="(^(%key)[^ 	]+)|([^ 	]+(%key)$)" MoreConvertRegex="^(%key)" MoreFormat="QMScript_$1" MoreSuffix="4"/>
+<MoreInfo MoreCheckRegex="^[^0123456789][\W\w\u4e00-\u9fa5]*" MoreConvertRegex="(.+)" MoreFormat="QMScript_$1" MoreSuffix="4"/>
+<MoreInfo MoreCheckRegex="[^\(\)]+\(\)" MoreConvertRegex="(.+)" MoreFormat="$1\(\)" MoreSuffix="4"/>
+</Commond>
+<Commond Keyword="Goto" Regex09="\s* " Regex01="(\s*)(%s)([ 	]+)(.+)" RegexFormat="$1($2)($3)($4)" Descript="">
+<MoreInfo MoreCheckRegex="\w+" MoreConvertRegex="([=+-/\\\* 	\&lt;\&gt;\{\}])" MoreFormat="_" MoreSuffix="4"/>
+<MoreInfo MoreCheckRegex="(^(%key)[^ 	]+)|([^ 	]+(%key)$)" MoreConvertRegex="^(%key)" MoreFormat="QMScript_$1" MoreSuffix="4"/>
+<MoreInfo MoreCheckRegex="^[^0123456789][\W\w\u4e00-\u9fa5]*" MoreConvertRegex="(.+)" MoreFormat="QMScript_$1" MoreSuffix="4"/>
+<MoreInfo MoreCheckRegex="[^\(\)]+\(\)" MoreConvertRegex="(.+)" MoreFormat="$1\(\)" MoreSuffix="4"/>
+</Commond>
+<Commond Keyword="Sub" Regex09="\s* " Regex01="(\s*)(%s)([ 	]+)(.+)" RegexFormat="$1($2)($3)($4)\(\)" Descript="">
+<MoreInfo MoreCheckRegex="\w+" MoreConvertRegex="([=+-/\\\* 	\&lt;\&gt;\{\}])" MoreFormat="_" MoreSuffix="4"/>
+<MoreInfo MoreCheckRegex="(^(%key)[^ 	]+)|([^ 	]+(%key)$)" MoreConvertRegex="^(%key)" MoreFormat="QMScript_$1" MoreSuffix="4"/>
+<MoreInfo MoreCheckRegex="^[^0123456789][\W\w\u4e00-\u9fa5]*" MoreConvertRegex="(.+)" MoreFormat="QMScript_$1" MoreSuffix="4"/>
+<MoreInfo MoreCheckRegex="[^\(\)]+\(\)" MoreConvertRegex="(.+)" MoreFormat="$1\(\)" MoreSuffix="4"/>
+</Commond>
+<Commond Keyword="Gosub" Regex09="\s*Call[ 	]+.+" Regex01="(\s*)(%s)([ 	]+)(.+)" RegexFormat="$1Call($3)($4)\(\)" Descript="">
+<MoreInfo MoreCheckRegex="\w+" MoreConvertRegex="([=+-/\\\* 	\&lt;\&gt;\{\}])" MoreFormat="_" MoreSuffix="4"/>
+<MoreInfo MoreCheckRegex="(^(%key)[^ 	]+)|([^ 	]+(%key)$)" MoreConvertRegex="^(%key)" MoreFormat="QMScript_$1" MoreSuffix="4"/>
+<MoreInfo MoreCheckRegex="^[^0123456789][\W\w\u4e00-\u9fa5]*" MoreConvertRegex="(.+)" MoreFormat="QMScript_$1" MoreSuffix="4"/>
+<MoreInfo MoreCheckRegex="[^\(\)]+\(\)" MoreConvertRegex="(.+)" MoreFormat="$1\(\)" MoreSuffix="4"/>
+</Commond>
+<Commond Keyword="KeyPress" Regex09="\s*(%s)[ 	]+([^, 	]+)[ 	]*,[ 	]*([^, 	]+)" Regex01="(\s*)(%s)[ 	]+([^ 	]+)[ 	]+([^ 	]+)" RegexFormat="$1$2 $3,$4" Descript=""/>
+<Commond Keyword="KeyDown" Regex09="\s*(%s)[ 	]+([^, 	]+)[ 	]*,[ 	]*([^, 	]+)" Regex01="(\s*)(%s)[ 	]+([^ 	]+)[ 	]+([^ 	]+)" RegexFormat="$1$2 $3,$4" Descript=""/>
+<Commond Keyword="KeyUp" Regex09="\s*(%s)[ 	]+([^, 	]+)[ 	]*,[ 	]*([^, 	]+)" Regex01="(\s*)(%s)[ 	]+([^ 	]+)[ 	]+([^ 	]+)" RegexFormat="$1$2 $3,$4" Descript=""/>
+<Commond Keyword="LeftClick" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="RightClick" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="MiddleClick" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="LeftDoubleClick" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="LeftDown" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="LeftUp" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="RightDown" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="RightUp" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="MoveTo" Regex09="\s*(%s)[ 	]+([^, 	]+)[ 	]*,[ 	]*([^, 	]+)" Regex01="(\s*)(%s)[ 	]+([^ 	]+)[ 	]+([^ 	]+)" RegexFormat="$1$2 $3,$4" Descript=""/>
+<Commond Keyword="MoveR" Regex09="\s*(%s)[ 	]+([^, 	]+)[ 	]*,[ 	]*([^, 	]+)" Regex01="(\s*)(%s)[ 	]+([^ 	]+)[ 	]+([^ 	]+)" RegexFormat="$1$2 $3,$4" Descript=""/>
+<Commond Keyword="KeyPressH" Regex09="\s*(%s)[ 	]+([^, 	]+)[ 	]*,[ 	]*([^, 	]+)" Regex01="(\s*)(%s)[ 	]+([^ 	]+)[ 	]+([^ 	]+)" RegexFormat="$1$2 $3,$4" Descript=""/>
+<Commond Keyword="KeyDownH" Regex09="\s*(%s)[ 	]+([^, 	]+)[ 	]*,[ 	]*([^, 	]+)" Regex01="(\s*)(%s)[ 	]+([^ 	]+)[ 	]+([^ 	]+)" RegexFormat="$1$2 $3,$4" Descript=""/>
+<Commond Keyword="KeyUpH" Regex09="\s*(%s)[ 	]+([^, 	]+)[ 	]*,[ 	]*([^, 	]+)" Regex01="(\s*)(%s)[ 	]+([^ 	]+)[ 	]+([^ 	]+)" RegexFormat="$1$2 $3,$4" Descript=""/>
+<Commond Keyword="LeftClickH" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="RightClickH" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="MiddleClickH" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="LeftDoubleClickH" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="LeftDownH" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="LeftUpH" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="RightDownH" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="RightUpH" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="MoveToH" Regex09="\s*(%s)[ 	]+([^, 	]+)[ 	]*,[ 	]*([^, 	]+)" Regex01="(\s*)(%s)[ 	]+([^ 	]+)[ 	]+([^ 	]+)" RegexFormat="$1$2 $3,$4" Descript=""/>
+<Commond Keyword="MoveRH" Regex09="\s*(%s)[ 	]+([^, 	]+)[ 	]*,[ 	]*([^, 	]+)" Regex01="(\s*)(%s)[ 	]+([^ 	]+)[ 	]+([^ 	]+)" RegexFormat="$1$2 $3,$4" Descript=""/>
+<Commond Keyword="KeyPressS" Regex09="\s*(%s)[ 	]+([^, 	]+)[ 	]*,[ 	]*([^, 	]+)" Regex01="(\s*)(%s)[ 	]+([^ 	]+)[ 	]+([^ 	]+)" RegexFormat="$1$2 $3,$4" Descript=""/>
+<Commond Keyword="KeyDownS" Regex09="\s*(%s)[ 	]+([^, 	]+)[ 	]*,[ 	]*([^, 	]+)" Regex01="(\s*)(%s)[ 	]+([^ 	]+)[ 	]+([^ 	]+)" RegexFormat="$1$2 $3,$4" Descript=""/>
+<Commond Keyword="KeyUpS" Regex09="\s*(%s)[ 	]+([^, 	]+)[ 	]*,[ 	]*([^, 	]+)" Regex01="(\s*)(%s)[ 	]+([^ 	]+)[ 	]+([^ 	]+)" RegexFormat="$1$2 $3,$4" Descript=""/>
+<Commond Keyword="LeftClickS" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="RightClickS" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="MiddleClickS" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="LeftDoubleClickS" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="LeftDownS" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="LeftUpS" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="RightDownS" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="RightUpS" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="MoveToS" Regex09="\s*(%s)[ 	]+([^, 	]+)[ 	]*,[ 	]*([^, 	]+)" Regex01="(\s*)(%s)[ 	]+([^ 	]+)[ 	]+([^ 	]+)" RegexFormat="$1$2 $3,$4" Descript=""/>
+<Commond Keyword="MoveRS" Regex09="\s*(%s)[ 	]+([^, 	]+)[ 	]*,[ 	]*([^, 	]+)" Regex01="(\s*)(%s)[ 	]+([^ 	]+)[ 	]+([^ 	]+)" RegexFormat="$1$2 $3,$4" Descript=""/>
+<Commond Keyword="UserVar" Regex09="\s*%s[ 	]+[^\(=]+=\s*DropList\{(\|*&quot;[^&quot;]+&quot;:&quot;[^&quot;]+&quot;)+\}=([ 	]*([0123456789]+))[, 	]?&quot;([^&quot;]+)&quot;" Regex01="(\s*)(%s)([ 	]+)([^=]+)=([ 	]*)(DropList)\{([^\}]*)\}(=[ 	]*[^ 	]+)?([, 	]*)(.*)" RegexFormat="$1($2)($3)($4)=($5)($6)\{($7)\}($8)($9)($10)" Descript="">
+<MoreInfo MoreCheckRegex="[^\(\)]+" MoreConvertRegex="([\(\)])" MoreFormat="_" MoreSuffix="4"/>
+<MoreInfo MoreCheckRegex="&quot;([^:\|&quot;]+)&quot;(:)?(([0123456789]+)|(&quot;[^:\|&quot;]+&quot;))(\|?)" MoreConvertRegex="([^\|:]+)(:)?([^:\|]+)?(\|?)" MoreFormat="($1)($2)($3)($4)" MoreSuffix="7"/>
+<MoreInfo MoreCheckRegex="=([ 	]*[0123456789]+)" MoreConvertRegex="=([ 	]*)(.+)" MoreFormat="=($1)0" MoreSuffix="8"/>
+<MoreInfo MoreCheckRegex=".+" MoreConvertRegex="" MoreFormat="$8" MoreSuffix="8"/>
+<MoreInfo MoreCheckRegex="[ 	]+" MoreConvertRegex="" MoreFormat=" " MoreSuffix="9"/>
+<MoreInfo MoreCheckRegex="&quot;[^&quot;]*&quot;" MoreConvertRegex="(.+)" MoreFormat="&quot;$1&quot;" MoreSuffix="10"/>
+</Commond>
+<Commond Keyword="UserVar" Regex09="\s*(%s)[ 	]+([^\(=]+)=([ 	]*(&quot;[^&quot;]+&quot;)|([0123456789]+))[, 	]?&quot;([^&quot;]+)&quot;" Regex01="(\s*)(%s)([ 	]+)([^=]+)=([ 	]*)([^ 	]+)?([, 	]*)(.+)*" RegexFormat="$1($2)($3)($4)=($5)($6)($7)($8)" Descript="">
+<MoreInfo MoreCheckRegex="[^\(\)]+" MoreConvertRegex="([\(\)])" MoreFormat="_" MoreSuffix="4"/>
+<MoreInfo MoreCheckRegex="([ 	]*[0123456789]+)|(&quot;[^&quot;]*&quot;)" MoreConvertRegex="([ 	]*)(.+)" MoreFormat="$1&quot;$2&quot;" MoreSuffix="6"/>
+<MoreInfo MoreCheckRegex="[ 	]+" MoreConvertRegex="" MoreFormat=" " MoreSuffix="7"/>
+<MoreInfo MoreCheckRegex="&quot;[^&quot;]*&quot;" MoreConvertRegex="(.+)" MoreFormat="&quot;$1&quot;" MoreSuffix="8"/>
+<MoreInfo MoreCheckRegex="&quot;[^&quot;]*&quot;" MoreConvertRegex="" MoreFormat="&quot;&quot;" MoreSuffix="8"/>
+</Commond>
+<Commond Keyword="UserVar" Regex09="\s*(%s)[ 	]+([^\( 	]+)([, 	]?&quot;([^&quot;]+)&quot;)" Regex01="(\s*)(%s)([ 	]+)([^ 	]+)([, 	]*)(.+)*" RegexFormat="$1($2)($3)($4)($5)($6)" Descript="">
+<MoreInfo MoreCheckRegex="[^\(\)]+" MoreConvertRegex="([\(\)])" MoreFormat="_" MoreSuffix="4"/>
+<MoreInfo MoreCheckRegex="[ 	]+" MoreConvertRegex="" MoreFormat=" " MoreSuffix="5"/>
+<MoreInfo MoreCheckRegex="&quot;[^&quot;]*&quot;" MoreConvertRegex="(.+)" MoreFormat="&quot;$1&quot;" MoreSuffix="6"/>
+</Commond>
+<Commond Keyword="Plugin" Regex09="\s*\s" Regex01="(\s*)(%s)([ 	]+)([^= 	\.]+)([ 	]*=[ 	]*)(.+)" RegexFormat="$1($4)($5)($2).($6)" Descript=""/>
+<Commond Keyword="Plugin" Regex09="\s*\s" Regex01="(\s*)(%s)[ 	]+([^ 	(=\.]+)(.*)" RegexFormat="$1Call ($2).($3)($4)" Descript=""/>
+<Commond Keyword="WaitKey" Regex09="\s*(\w+[ 	]*=[ 	]*)*(%s)[ 	]*" Regex01="(\s*)(%s)[ 	]+(\w+)[ 	]*" RegexFormat="$1($3) = ($2)\(\)" Descript=""/>
+<Commond Keyword="GetLastKey" Regex09="\s*(\w+[ 	]*=[ 	]*)*(%s)[ 	]*" Regex01="(\s*)(%s)[ 	]+(\w+)[ 	]*" RegexFormat="$1($3) = ($2)\(\)" Descript=""/>
+<Commond Keyword="WaitClick" Regex09="\s*(\w+[ 	]*=[ 	]*)*(%s)[ 	]*" Regex01="(\s*)(%s)[ 	]+(\w+)[ 	]*" RegexFormat="$1($3) = ($2)\(\)" Descript=""/>
+<Commond Keyword="GetLastClick" Regex09="\s*(\w+[ 	]*=[ 	]*)*(%s)[ 	]*" Regex01="(\s*)(%s)[ 	]+(\w+)[ 	]*" RegexFormat="$1($3) = ($2)\(\)" Descript=""/>
+<Commond Keyword="VBS" Regex09="\s*\s" Regex01="(\s*)(%s)[ 	]?(.*)" RegexFormat="$1$3" Descript=""/>
+<Commond Keyword="VBSCall" Regex09="\s*(Call[ 	]+)|(\w+[ 	]*=[ 	]*)(.+)" Regex01="(\s*)(%s)([ 	]+call)*[ 	]+([^=]+)" RegexFormat="$1Call $4" Descript="">
+<MoreInfo MoreCheckRegex="" MoreConvertRegex="(.+)" MoreFormat="$1" MoreSuffix="4"/>
+</Commond>
+<Commond Keyword="VBSCall" Regex09="\s*(Call[ 	]+)|(\w+[ 	]*=[ 	]*)(.+)" Regex01="(\s*)(%s)[ 	]+([^= 	]+)[ 	]?=[ 	]?(.+)" RegexFormat="$1$3=$4" Descript=""/>
+<Commond Keyword="PutAttachment" Regex09="\s*(%s)[ 	]+&quot;([^&quot; 	,]+)&quot;([ 	]*,[ 	])&quot;([^&quot;\n]*)&quot;" Regex01="(\s*)(%s)([ 	]+)([^ 	,]+)([ 	,]*)(.*)" RegexFormat="$1($2)($3)($4)($5)($6)" Descript="">
+<MoreInfo MoreCheckRegex="&quot;[^&quot;]+&quot;" MoreConvertRegex="(.+)" MoreFormat="&quot;$1&quot;" MoreSuffix="4"/>
+<MoreInfo MoreCheckRegex="[ 	]*,[ 	]*" MoreConvertRegex="(.+)" MoreFormat="," MoreSuffix="5"/>
+<MoreInfo MoreCheckRegex=".+" MoreConvertRegex="(.*)" MoreFormat="&quot;*.*&quot;" MoreSuffix="6"/>
+<MoreInfo MoreCheckRegex="&quot;[^&quot;]*&quot;[ 	]*" MoreConvertRegex="(.+)" MoreFormat="&quot;$1&quot;" MoreSuffix="6"/>
+</Commond>
+<Commond Keyword="Import" Regex09="\s*(%s)[ 	]+&quot;[^\.]+\.(vbs|dll)&quot;" Regex01="(\s*)(%s)[ 	]+([^\.]+)\.(vbs|dll)" RegexFormat="$1$2 &quot;$3.$4&quot;" Descript=""/>
+<Commond Keyword="BeginThread" Regex09="\s*(%s)[ 	]+(\w+)" Regex01="(\s*)(%s)[ 	]+&quot;([^&quot;]+)&quot;" RegexFormat="$1$2 $3" Descript=""/>
+<Commond Keyword="//.*" Regex09="\s*.*" Regex01="(\s*)(%s).*" RegexFormat="$1$0" Descript=""/>
+<Commond Keyword="If" Regex09="\s*(%s)[ 	]+([^ 	]+[ 	]+)*Then" Regex01="(\s*)(%s)[ 	]+(.*)" RegexFormat="$1$2 $3 Then" Descript=""/>
+<Commond Keyword="ElseIf" Regex09="\s*(%s)[ 	]+([^ 	]+[ 	]+)*Then" Regex01="(\s*)(%s)[ 	]+(.*)" RegexFormat="$1$2 $3 Then" Descript=""/>
+<Commond Keyword="EndIf" Regex09="\s*End if" Regex01="(\s*)(.+)" RegexFormat="$1End if" Descript=""/>
+<Commond Keyword="IfColor" Regex09="\s*(%s)[ 	]+([^,]+),([^,]+),&quot;([^&quot;]+)&quot;.*[ 	]*Then" Regex01="(\s*)(%s)[ 	]+([^, 	]+)[, 	]+([^, 	]+)[, 	]+([^, 	]+)[, 	]+(.*)" RegexFormat="$1$2 $3,$4,$5,$6" Descript="">
+<MoreInfo MoreCheckRegex="[a-fA-F0123456789]*[^a-fA-F0123456789].*" MoreConvertRegex="([a-fA-F0123456789]{1,6})" MoreFormat="&quot;$1&quot;" MoreSuffix="5"/>
+<MoreInfo MoreCheckRegex="[^ 	]+[ 	]+Then" MoreConvertRegex="(.+)" MoreFormat="$1 Then" MoreSuffix="6"/>
+</Commond>
+<Commond Keyword="IfColor" Regex09="\s*(%s)[ 	]+([^ 	]+)[ 	]+([^ 	]+)[ 	]+&quot;([^&quot;]+)&quot;.*[ 	]*Then" Regex01="(\s*)(%s)[ 	]+([^ 	]+)[ 	]+([^ 	]+)[ 	]+([^ 	]+)[ 	]+(.*)" RegexFormat="$1$2 $3,$4,$5,$6" Descript="">
+<MoreInfo MoreCheckRegex="[a-fA-F0123456789]*[^a-fA-F0123456789].*" MoreConvertRegex="([a-fA-F0123456789]{1,6})" MoreFormat="&quot;$1&quot;" MoreSuffix="5"/>
+<MoreInfo MoreCheckRegex="[^ 	]+[ 	]+Then" MoreConvertRegex="(.+)" MoreFormat="$1 Then" MoreSuffix="6"/>
+</Commond>
+<Commond Keyword="EndWhile" Regex09="\s*Wend" Regex01="(\s*).+" RegexFormat="$1Wend" Descript=""/>
+<Commond Keyword="EndFor" Regex09="\s*Next" Regex01="(\s*).+" RegexFormat="$1Next" Descript=""/>
+<Commond Keyword="Return" Regex09="\s*End Sub" Regex01="(\s*).+" RegexFormat="$1End Sub" Descript=""/>
+<Commond Keyword="SayExpression" Regex09="\s*SayString[ 	]+.+" Regex01="(\s*)(%s)[ 	]+(.+)" RegexFormat="$1SayString $3" Descript=""/>
+<Commond Keyword="FindPic" Regex09="\s*Call[ 	]+(%s).*" Regex01="(\s*)(%s)[ 	]*\(.*\)" RegexFormat="$1Call $0" Descript=""/>
+<Commond Keyword="FindCenterColor" Regex09="\s*Call[ 	]+(%s).*" Regex01="(\s*)(%s)[ 	]*\(.*\)" RegexFormat="$1Call $0" Descript=""/>
+<Commond Keyword="GetPixelColor" Regex09="\s*Call[ 	]+(%s).*" Regex01="(\s*)(%s)[ 	]*\(.*\)" RegexFormat="$1Call $0" Descript=""/>
+<Commond Keyword="FindColor" Regex09="\s*Call[ 	]+(%s).*" Regex01="(\s*)(%s)[ 	]*\(.*\)" RegexFormat="$1Call $0" Descript=""/>
+<Commond Keyword="FindColorEx" Regex09="\s*Call[ 	]+(%s).*" Regex01="(\s*)(%s)[ 	]*\(.*\)" RegexFormat="$1Call $0" Descript=""/>
+<Commond Keyword="Delay" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="EndScript" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="SaveMousePos" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="RestoreMousePos" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="LockMouse" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="UnlockMouse" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="set" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="While" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="MsgBox" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="Else" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="ElseIf" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="Execute" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="For" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="Dim" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="RunApp" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="End" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="GetScreenResolution" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="Wend" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="Next" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="SayString" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="MessageBox" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="Beep" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="SetSimMode" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="TracePrint" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+<Commond Keyword="Randomize" Regex09="\s*.*" Regex01="(\s*)" RegexFormat="$1" Descript=""/>
+</CommondInfo>
